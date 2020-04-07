@@ -21,6 +21,7 @@ var limitCont=10000; //10k intentos intentado encontrar hueco libre para el punt
 //Programa
 startButton.addEventListener("click",startGame);
 quitButton.addEventListener("click",quit);
+alert("Welcome to the Snake Game! Use the arrow keys to move the snake, you can go through the walls and change the direction but not the sense. Eat as many apples as you can and enjoy!");
 
 
 //Declaraciones
@@ -203,79 +204,135 @@ function moveSerpent(){
 	length=serpent.length;
 
 	if (moveRight()){
-		if (previous_mov==="l"){
-			serpent.reverse();
+		if (previous_mov==="l"){ //no cambia el sentido
+			//serpent.reverse();
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].y--;
+			if (serpent[0].y<0){
+				serpent[0].y=9;
+			}
+			previous_mov='l';
 		}
+		else{
 
-		oldx=serpent[length-1].x;
-		oldy=serpent[length-1].y;
+			//oldx=serpent[length-1].x;
+			//oldy=serpent[length-1].y;
 
-		for (i=length-1;i>0;i--){
-			serpent[i].x=serpent[i-1].x;
-			serpent[i].y=serpent[i-1].y;
-		}
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
 
-		serpent[0].y++;
-		if (serpent[0].y>9){
-			serpent[0].y=0;
+			serpent[0].y++;
+			if (serpent[0].y>9){
+				serpent[0].y=0;
+			}
+
+			previous_mov='r';
 		}
 	}
 		
 	else if (moveLeft()){
 		if (previous_mov==="r"){
-			serpent.reverse();
-		}
+			//serpent.reverse();
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].y++;
+			if (serpent[0].y>9){
+				serpent[0].y=0;
+			}
 
-		oldx=serpent[length-1].x;
-		oldy=serpent[length-1].y;
+			previous_mov='r';
 
-		for (i=length-1;i>0;i--){
-			serpent[i].x=serpent[i-1].x;
-			serpent[i].y=serpent[i-1].y;
 		}
-		serpent[0].y--;
-		if (serpent[0].y<0){
-			serpent[0].y=9;
+		else{
+
+			//oldx=serpent[length-1].x;
+			//oldy=serpent[length-1].y;
+
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].y--;
+			if (serpent[0].y<0){
+				serpent[0].y=9;
+			}
+
+			previous_mov='l';
 		}
 		
 	}
 	else if (moveTop()){
 		if (previous_mov==="b"){
-			serpent.reverse();
-		}
-
-		oldx=serpent[length-1].x;
-		oldy=serpent[length-1].y;
-
-		for (i=length-1;i>0;i--){
+			//serpent.reverse();
+			for (i=length-1;i>0;i--){
 			serpent[i].x=serpent[i-1].x;
 			serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].x++;
+			if (serpent[0].x>9){
+				serpent[0].x=0;
+			}
+
+			previous_mov='b';
 		}
-		serpent[0].x--;
-		if (serpent[0].x<0){
-			serpent[0].x=9;
+		else{
+
+			//oldx=serpent[length-1].x;
+			//oldy=serpent[length-1].y;
+
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].x--;
+			if (serpent[0].x<0){
+				serpent[0].x=9;
+			}
+
+			previous_mov='t';
 		}
 	}
 		
 	else if (moveBottom()){
 		if (previous_mov==="t"){
-			serpent.reverse();
-		}
+			//serpent.reverse();
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].x--;
+			if (serpent[0].x<0){
+				serpent[0].x=9;
+			}
 
-		oldx=serpent[length-1].x;
-		oldy=serpent[length-1].y;
-
-		for (i=length-1;i>0;i--){
-			serpent[i].x=serpent[i-1].x;
-			serpent[i].y=serpent[i-1].y;
+			previous_mov='t';
 		}
-		serpent[0].x++;
-		if (serpent[0].x>9){
-			serpent[0].x=0;
+			else{
+
+			//oldx=serpent[length-1].x;
+			//oldy=serpent[length-1].y;
+
+			for (i=length-1;i>0;i--){
+				serpent[i].x=serpent[i-1].x;
+				serpent[i].y=serpent[i-1].y;
+			}
+			serpent[0].x++;
+			if (serpent[0].x>9){
+				serpent[0].x=0;
+			}
+
+			previous_mov='b';
 		}
 	}
 
-	previous_mov=mov;
+	
 		//changeColorToWhite(oldx,oldy);
 	if(!checkIfyouLost() && !checkIfyouWin()){
 		if(eat()){
