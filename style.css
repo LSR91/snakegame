@@ -1,0 +1,63 @@
+body{
+	margin:0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Inconsolata', monospace;
+	color:#23FF00;
+	background-color: black;
+}
+
+header{
+	margin: 20px;
+}
+h1{
+	text-align: center;
+	font-size: 3.5rem;
+	font-family: 'Inconsolata', monospace;
+}
+
+p{
+	font-size: 1rem;
+	margin: 10px 0px 0px 0px;
+}
+
+.container{
+	border: 2px solid #23FF00;
+	background-color: white;
+	display:grid;
+	grid-template-columns: repeat(10,1fr);
+	width: 300px;
+	height: 300px;
+
+}
+
+.square{
+	/*border: 0.5px solid black;*/
+}
+
+
+@media only screen and(max-width: 400px){
+	.container{
+		width: 150px;
+		height: 150px;
+	}
+}
+
+.botones{
+	display:flex;
+}
+
+button{
+	font-size: 1.5rem;
+	padding: 10px;
+	margin:50px;
+	border-radius: 50px;
+	width: 150px;
+}
+
+button:hover{
+	font-weight: bold;
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
+}
