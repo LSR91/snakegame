@@ -21,7 +21,7 @@ var limitCont=10000; //10k intentos intentado encontrar hueco libre para el punt
 //Programa
 startButton.addEventListener("click",startGame);
 quitButton.addEventListener("click",quit);
-alert("Welcome to the Snake Game! Use the arrow keys to move the snake, you can go through the walls and change the direction but not the sense. Eat as many apples as you can and enjoy!");
+alert("Welcome to the Snake Game! Use the arrow keys to move the snake, you can go through the walls and change the direction but not the orientation. Eat as many apples as you can and enjoy!");
 
 
 //Declaraciones
