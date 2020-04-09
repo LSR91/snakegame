@@ -4,6 +4,10 @@ var startButton=document.getElementsByClassName("startbutton")[0];
 var quitButton=document.getElementsByClassName("quitbutton")[0];
 var iniSquare1=document.getElementById("sq44");
 var iniSquare2=document.getElementById("sq45");
+var buttontop=document.getElementsByClassName("buttontop")[0];
+var buttonbottom=document.getElementsByClassName("buttonbottom")[0];
+var buttonright=document.getElementsByClassName("buttonright")[0];
+var buttonleft=document.getElementsByClassName("buttonleft")[0];
 var serpent=[];
 var square=document.getElementsByClassName("square");
 var mov='a';
@@ -140,6 +144,25 @@ function move(){
 	moveSerpent();
 }
 
+function movebuttonleft(){
+	mov='l';
+	moveSerpent();
+}
+
+function movebuttonright(){
+	mov='r';
+	moveSerpent();
+}
+
+function movebuttontop(){
+	mov='t';
+	moveSerpent();
+}
+
+function movebuttonbottom(){
+	mov='b';
+	moveSerpent();
+}
 
 function moveRight(){
 	if(mov==='r'){
@@ -429,7 +452,10 @@ function startGame(){
 	initializeGame();
 	randomPoint();
 	window.addEventListener("keydown",move);
-
+	buttonleft.addEventListener("click",movebuttonleft);
+	buttonright.addEventListener("click",movebuttonright);
+	buttontop.addEventListener("click",movebuttontop);
+	buttonbottom.addEventListener("click",movebuttonbottom);
 	idleInterval = setInterval(interval, 500); // intervalo de 600ms si hay inactividad
 }
 

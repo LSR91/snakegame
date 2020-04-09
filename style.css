@@ -10,7 +10,7 @@ body{
 }
 
 header{
-	margin: 20px;
+	margin: 8px;
 }
 h1{
 	text-align: center;
@@ -38,21 +38,18 @@ p{
 }
 
 
-@media only screen and(max-width: 400px){
-	.container{
-		width: 150px;
-		height: 150px;
-	}
-}
-
 .botones{
 	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+	padding: 0px;
 }
 
 button{
 	font-size: 1.5rem;
-	padding: 10px;
-	margin:50px;
+	padding: 7px;
+	margin: 2px 20px;
 	border-radius: 50px;
 	width: 150px;
 }
@@ -60,4 +57,65 @@ button{
 button:hover{
 	font-weight: bold;
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
+}
+
+.flechas{
+	display: grid;
+	align-items: center;
+	margin:10px 0px;
+}
+
+.buttonarrow{
+	font-size: 1.5rem;
+	padding: 8px;
+	margin:0px;
+	border-radius: 15px;
+	width: 75px;
+}
+
+.buttontop{
+	grid-row:1/2;
+	grid-column: 2/3;
+}
+.buttonleft{
+	grid-row:2/3;
+	grid-column: 1/2;
+}
+
+.buttonright{
+	grid-row:2/3;
+	grid-column: 3/4;
+}
+.buttonbottom{
+	grid-row:2/3;
+	grid-column: 2/3;
+}
+
+
+@media only screen and (max-width: 900px){
+	.container{
+		width: 150px;
+		height: 150px;
+	}
+
+	h1{
+		font-size: 1rem;
+	}
+
+	.botones{
+		margin:5px;
+		padding: 5px;
+	}
+
+	button{
+	font-size: 1rem;
+	padding: 7px;
+	margin: 2px 20px;
+	width: 75px;
+	}
+
+	.buttonarrow{
+	font-size: 1rem;
+	width: 40px;
+	}
 }
