@@ -121,5 +121,6 @@ button:hover{
 	.buttonarrow{
 	font-size: 1rem;
 	width: 40px;
+	margin: 2px;
 	}
 }
