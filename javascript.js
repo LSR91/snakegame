@@ -447,7 +447,7 @@ function happyFace(){
 function startGame(){
 	//alert("Good Luck!");
 	removeAll();
-	totalPoints=1;
+	totalPoints=0;
 	points.innerHTML=0;
 	initializeGame();
 	randomPoint();
@@ -472,7 +472,7 @@ function quit(){
 	removeAll();
 	clearInterval(idleInterval);
 	//alert("See you soon!");
-	totalPoints=1;
+	totalPoints=0;
 	points.innerHTML=0;
 }
 
