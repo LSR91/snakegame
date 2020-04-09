@@ -1,5 +1,4 @@
 body{
-	-webkit-appearance: none;
 	margin:0 auto;
 	display: flex;
 	justify-content: center;
@@ -49,6 +48,8 @@ p{
 
 button{
 	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	font-size: 1.5rem;
 	padding: 7px;
 	margin: 2px 20px;
