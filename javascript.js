@@ -92,7 +92,7 @@ function checkArray(newx,newy){  //comprueba que el cuadrado está libre
 }
 
 function addPoints(){
-	totalPoints=totalPoints*3;
+	totalPoints=totalPoints+3;
 	points.innerHTML=totalPoints;
 }
 

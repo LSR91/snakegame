@@ -48,27 +48,24 @@ p{
 
 button{
 	-webkit-appearance: none !important;
-	-webkit-appearance: button;
 	-moz-appearance: none;
-	appearance: none;
 	font-size: 1.5rem;
-	-webkit-font-size: 1.5rem;
 	padding: 7px;
-	-webkit-padding: 7px;
 	margin: 2px 20px;
-	-webkit-margin: 2px 20px;
-	border-radius: 50px;
 	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	background-color: #DDDDDD;
+	-webkit-background-color: #DDDDDD;
 	width: 150px;
 }
 
 button:hover{
 	font-weight: bold;
-	box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
 	-moz-box-shadow: : 0px 5px 5px rgba(0,0,0,0.7);
 	-webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
 	-o-box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
 	-ms-box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
 }
 
 .flechas{
