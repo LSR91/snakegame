@@ -48,7 +48,7 @@ p{
 
 button{
 	-webkit-appearance: none;
-	-webkit-border-radius: 50px;
+	-webkit-border-radius: 0;
 	font-size: 1.5rem;
 	padding: 7px;
 	margin: 2px 20px;
