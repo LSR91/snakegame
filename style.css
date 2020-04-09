@@ -48,6 +48,7 @@ p{
 
 button{
 	-webkit-appearance: none !important;
+	-webkit-appearance: button;
 	-moz-appearance: none;
 	appearance: none;
 	font-size: 1.5rem;
